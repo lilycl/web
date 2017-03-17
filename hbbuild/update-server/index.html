@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>离线组件更新</title>
+  </head>
+
+  <body>
+    <form action="" method="POST" style="margin: 30px;">
+      <input type="file" style="float:left;"/>
+      <button type="submit" class="btn btn-success">开始上传</button>
+    </form>
+    <table class="table" style="width: 80%;margin: 30px;">
+      <thead>
+        <tr><th>组件版本</th><th>组件地址</th><th>操作</th></tr>
+      </thead>
+      <tbody id="content"></tbody>
+    </table>
+  </body>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script>
+    $.getJSON('/getpackagelist', function(ret){
+      $("#content").html(ret.map(function(item){
+        return '<tr><td>'+item.version+'</td>'+
+               '<td>'+item.url+
+               '</td><td>'+(!item.isonline?'<button type="button" class="btn btn-primary">上线</button>':'')+
+               '</td></tr>'
+      }))
+    })
+  </script>
+</html>

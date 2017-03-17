@@ -1,0 +1,118 @@
+@import '../common.less';
+#page-common {
+	.mint-header{
+		background-color:rgba(0,0,0,0.1);
+		color:#fff;
+
+		width: 100%;
+		
+		padding-left: 0px;
+		padding-right: 0px;
+		border-bottom:0.5px solid rgba(255,255,255,0.3);
+	}
+	.page-index-banner{
+		height: 198px;
+		margin-top:-40px;
+		img{
+			height: 100%;
+		}
+	}
+	.topbar-back{
+		width: 9px;
+		height: 9px;
+		border-top:solid 0.5px #fff;
+		border-left:solid 0.5px #fff;
+	}
+	.modl-hori-scroll{
+
+		background: #f2f2f2;
+	}
+	#popUp-header{
+
+		.mint-header{
+			background: #fff;
+			color: #000;
+			border-bottom:none;
+			.mint-header-title{
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.cat-choose{
+	width: 100%;
+	background: #fff;
+	margin-top: 10px;
+	li{
+		height:29px;
+		line-height: 30px;
+		border-bottom: 0.5px solid  @com-border;
+		font-size: 10px;
+		color: @com-tip;
+		text-indent: 15px;
+		position: relative;
+		
+	}
+	.current{
+		background: @com-tab-bg;
+		i{
+			width: 12px;
+			height:8px;
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			background:url(../../assets/images/index/choose_OK.png) no-repeat;
+			background-size: cover;
+		}
+	}
+}
+#sports-choose{
+
+	ul{
+		width: 290px;
+		margin: 0 auto;
+		li{
+			height: 60px;
+			
+			line-height: 0;
+			
+			img{
+				width: 26px;
+				height: 26px;
+				position: absolute;
+				left: 10px;
+				top:17px;
+			}
+			div{
+				width: 180px;
+				position: absolute;
+				left: 50px;
+				p{
+					text-indent: 0;
+					font-size: 12px;
+					color: #000;
+					margin-top: 22px;
+				}
+				span{
+					line-height: 30px;
+				}
+			}
+		}
+		.current{
+			i{
+				right: 15px;
+				top: 26px;
+			}
+		}
+	}
+}
+.header-title{
+	height:40px;
+	line-height:40px;
+	img{
+		width: 6px;
+		margin-top: 18px;
+	}
+	
+}

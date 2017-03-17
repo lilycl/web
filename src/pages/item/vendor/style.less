@@ -1,0 +1,64 @@
+@import '../../common.less';
+.meichant-name{
+    width: 100%; 
+    margin-bottom: 1px; 
+    background:url(../../../assets/images/index/shop_bg.png) no-repeat;
+    background-size:cover;
+    padding-bottom: 15px;
+
+    .meichant-name-img{
+        width:40px; 
+        height: 40px; 
+        border:0.5px solid #e9e9e9; 
+        position: relative; 
+        margin-top:40px; 
+        margin-left: 120px
+    }
+    img{ 
+        max-width:100%;
+        max-height:100%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform-origin:50% 50%;
+        -webkit-transform:translate3d(-50%,-50%,0); 
+        background:#9b9b9b;
+    }
+    .meichant-name-p0{
+        font-size: 12px; 
+        text-align: center; 
+        margin-top: 15px;
+        
+    }
+    .meichant-name-p0   span{
+            border:0.5px solid @com-base; 
+            color:@com-base;
+            border-radius: 2px;  
+            padding:0px 2px; 
+            font-size:8px; 
+            margin-left:10px;
+        }
+    .meichant-name-p1{
+        font-size: 8px; 
+        text-align: center; 
+        margin-top: 15px;
+    }
+}
+#item-vendor-scroll{
+    .modl-hori-scroll{
+        background: #f5f5f5;
+    }
+}
+
+#page-common{
+    .modl-catnav ul li .current{
+        border-bottom: 3px solid #000;
+    color: #000;
+    }
+    .home{
+        right: 35px;
+    }
+    .modl-catnav ul{
+        background: #f5f5f5;
+    }
+}

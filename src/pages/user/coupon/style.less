@@ -1,0 +1,119 @@
+@import '../../common.less';
+/*优惠券*/
+.coupon-bg{
+  background: #f5f5f5;
+  min-height: 100%;
+}
+
+#coupon-header{
+  .mint-header{
+		border-bottom: none;
+	}
+}
+#base-coupontab {
+margin-bottom:10px;
+    ul{
+    margin: 0 auto; 
+    padding-left:20px
+    }
+    a{
+        margin:0px 29px;
+        color: @com-tip;
+        padding: 0px 1px;
+    }
+    .current{
+      border-bottom:3px solid #000;
+      color: @com-title;
+    }
+
+}
+.coupon{
+width: 290px; 
+overflow: auto;
+margin: 0 auto;
+height:60px; 
+background:url(../../../assets/images/item/ticket_bg.png) no-repeat;
+background-size:contain;
+text-indent: 10px; 
+position: relative;
+margin-bottom: 10px;
+    h4{
+    font-size:12px;
+    color:@com-title;
+    }
+    p{
+    font-size:8px;
+    color:@com-subtitle; 
+    line-height:14px;
+    margin-top: -5px;
+    }
+    p:nth-child(3){
+      margin-top: 4px;
+    }
+}
+
+.coupon-l{
+width: 210px;
+margin-top:10px;
+float: left;
+}
+
+.coupon-l-border{
+    width: 213px;
+    padding: 3px 0px;
+    margin-top: 0px
+}
+
+.coupon-r{
+width:75px;
+height:60px; 
+float: left;
+}
+
+.coupon-rtext{
+font-size:22px;
+color:#fff;
+text-align:center;
+margin-top:15px;
+margin-left: -3px;
+  em{
+    font-size: 11px;
+    margin-right: 5px;
+    color: #fff;
+  }
+}
+.coupon-now{
+font-size:12px;
+color:#fff;
+margin-top:22px;
+margin-left: 4px;
+}
+
+.coupon-l-used{
+  h4{
+  color: @com-subtitle;
+  }
+}
+
+.coupon-used{
+  position: relative;
+  background:#CBCBCB; 
+  i{
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    left:-40px;
+    top:13px;
+    
+  }
+  .used{
+    background:url(../../../assets/images/user/used.png) no-repeat;
+    background-size: cover;
+  }
+  .noused{
+    background:url(../../../assets/images/user/noused.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+/*优惠券*/

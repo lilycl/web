@@ -1,0 +1,112 @@
+@import '../../common.less';
+.refund-consult{ 
+	background: #fff; 
+	font-size: 11px; 
+	color:@com-tip;
+	line-height: 20px;
+	padding:0px 15px 10px 15px; 
+	border-bottom: 0.5px solid @com-border;
+	width: 280px;
+	margin-left: 25px;
+	p{
+		color: #000;
+		margin-bottom: 5px;
+	}
+		.r-l{
+		float: left;
+		color:@com-tip;
+		
+	}
+	.r-r{
+		float: right;
+		width: 190px;
+	}
+	div{
+		color: #000;
+	}	
+	.r-c-cnt{
+		margin-top:15px;
+	}
+}
+
+#r-c-img{
+	margin-left:60px;
+	margin-top: 5px;
+	.base-load-img{
+		margin-left: 0px;
+		margin-right:5px;
+		&:last-child{
+			margin-right:0px;
+		}
+	}
+}
+
+.consult_top{
+	height: 39px; 
+	line-height: 39px;
+	background: #fff;
+	padding: 0px 15px 0px 40px;
+	font-size: 11px;
+	position: relative;
+	.span1{
+		float: right;
+		color: #a4a4a4;
+	}
+	.refund-consult-store{
+		width: 12px;
+		height: 12px;
+		background: @com-base;
+		display: inline-block;
+    padding-top: 10px;
+    float: left;
+    margin-top: 14px;
+    margin-right: 5px;
+	}
+	.refund-consult-self{
+		width: 12px;
+		height: 12px;
+		background: @com-base;
+		display: inline-block;
+    padding-top: 10px;
+    float: left;
+    margin-top: 14px;
+    margin-right: 5px;
+	}
+}
+
+.refund-consult-line{
+	border:0.5px solid #cbcbcb; 
+	height:210px; 
+	position: absolute; 
+	top: 26px;
+	left: 14px;
+	z-index: 1;
+}
+.refund-consult-circle{
+	width:10px; 
+	height:10px; 
+	border:2px solid @com-border; 
+	background: #fff; 
+	border-radius: 50%; 
+	position: absolute; 
+	top:15px; 
+	left:10px; 
+	z-index: 2;
+}
+.circle-color {
+	color: @com-base;
+	.refund-consult-circle{
+		border-color: @com-base;
+	}
+}
+.logic1{
+	width:6px; 
+	height:6px; 
+	border:2px solid @com-border; 
+	background: #fff; 
+	border-radius: 50%; 
+	position: absolute; 
+	top:3px; 
+	left: 0; 
+	z-index: 2;
+}

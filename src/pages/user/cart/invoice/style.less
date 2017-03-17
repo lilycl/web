@@ -1,0 +1,98 @@
+@import '../../../common.less';
+#receipt-message {
+	background: #fff;
+	.mint-cell-wrapper{
+		padding: 0 0 0 10px;
+	}
+	.mint-radiolist-title{
+		background: #f5f5f5;
+		margin:0;
+		color: #000;
+		padding:12px 15px; 
+	}
+	.mint-cell{
+		width: 50px;
+		display: inline-block;
+	}
+	
+}
+
+#invoice-cnt{
+	.mint-cell:before{
+		border:none;
+	}
+	.mint-cell:after{
+		border:none;
+	}
+}
+#receipt-name{
+	.mint-cell:before{
+		border:none;
+	}
+	.mint-cell:after{
+		color: @com-border;
+	}
+	.mint-field-core{
+		color: #9b9b9b;
+	}
+}
+
+#receipt-cnt{
+	.mint-cell:before{
+		border:none;
+	}
+	.mint-cell:after{
+		border:none;
+	}
+}
+
+.mint-radio-input:checked + .mint-radio-core{
+		background-color:#fff;
+		border-color:@com-base;
+	}
+	.mint-radio-input:checked + .mint-radio-core::after{
+		background-color:@com-base;
+	}
+		.mint-cell{
+		width: 100%;
+		display: block;
+		.mint-radio-core{
+			width: 12px;
+			height: 12px;
+			
+		}
+		.mint-radio-core::after{
+			left: 2px;
+			top:2px;
+			width: 6px;
+			height: 6px;
+		}
+	}
+	.invoice-info{
+		p{
+			line-height:40px;
+			padding-left:15px;
+			color:#000;
+		}
+		ul{
+			background:#fff;
+			text-indent: 15px;
+			li{
+				height: 40px;
+				line-height: 40px;
+				border-bottom: 0.5px solid #f5f5f5;
+				lable{
+					color: #9b9b9b;
+				}
+				span{
+					margin-left: 6px;
+				}
+			}
+		}
+	}
+
+	#invoice-header{
+		.mint-cell-value{
+			color: #9b9b9b;
+		}
+	}

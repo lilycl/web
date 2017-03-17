@@ -1,0 +1,140 @@
+@import '../common.less';
+@import '../boy.less';
+/*分类*/
+body{
+	background: #fff;
+}
+.nav-left{
+	width:63px;
+	height:100%;
+	overflow:scroll;
+	background:#fff;
+	padding-top: 55px;
+	position:fixed;
+	border-right: 0.5px solid #eee;
+	li{
+		float:left;
+		width: 100%;
+		height:40px;
+		line-height: 40px; 
+			a{
+				width: 100%;
+				height: 15px;
+				line-height: 15px;
+				margin-top: 10px;
+				color: #9b9b9b;
+				display: block;
+				font-size:11px;
+				text-indent:6px;
+				border-left:5px solid #fff;
+
+			}
+		}
+	.p{
+		width: 44px;
+		height:20px; 
+		line-height:20px;
+		border-bottom:0.5px solid #f5f5f5;
+		margin-bottom: 20px;
+		margin-left: 10px;
+	}	
+}
+
+.cat-nav{
+	background:#fff;
+	float: left;
+	.current{
+		color:#000;
+		font-weight:600;
+		border-left:5px solid #000;
+	}
+}
+
+.cat-main{
+	float: left;
+	margin-top: 50px;
+	margin-left: 63px;
+	overflow: auto;
+	h2{
+		font-size:12px; 
+		color:#000;
+		text-align:center;
+		position:relative;
+		padding: 8px 0;
+		img{
+			position: absolute;
+			width: 16px;
+			top:50%;
+			left:50%;
+			margin-left: -28px;
+			position: absolute;
+			-webkit-transform-origin:50% 50%;
+			-webkit-transform:translate3d(-50%,-50%,0);
+		}
+	}
+
+}
+.cat-main:first-child{
+	padding-top: 40px;
+}
+
+.cat-detail{
+	width: 256px;
+	border-top:0.5px solid #f5f5f5;
+	.item{
+			width: 84px;
+			height: 98px;
+			text-align: center;
+			border-bottom: 0.5px solid #eee;
+			border-right: 0.5px solid #eee;
+			float: left;
+		  }
+		  .li-img{
+			height: 74px;
+			position: relative;
+			 img{
+				width: 74px; 
+			 	max-width:100%;
+				max-height:100%;
+				position:absolute;
+				top:50%;
+				left:50%;
+				-webkit-transform-origin:50% 50%;
+				-webkit-transform:translate3d(-50%,-50%,0);
+			 }
+		  }
+		.item:nth-child(3n+3){
+			border-right:none;
+		}
+		.p0{
+			font-size: 9px;	
+			margin-top:5px;
+			text-align:center;
+		}
+}
+
+#cat-tab{ 
+	padding-left:8px;
+	background:@com-tab-bg;
+	z-index: 9;
+	position:fixed;
+	border-bottom: none;
+	 padding-top:10px;
+	 height: auto;
+	a{    
+		margin: 0px 17px;
+		padding: 0px 2px;
+		color: @com-tip;
+		font-size: 13px;
+	}
+	a:active{
+
+		background: @com-tab-bg;
+	}
+	.current{
+		color:@boy-color;
+		border-bottom:3px solid @boy-color;
+	}
+}
+
+.cat-wrap{height:100%;}

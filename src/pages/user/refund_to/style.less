@@ -1,0 +1,82 @@
+@import '../../common.less';
+.refund-to-header{
+  height: 50px;
+  width: 100%;
+  background: #f5f5f5;
+  .refund-to-bank{
+      float: left;
+      height: 42px;
+      line-height: 45px;
+      width:290px;
+      margin: 0px 15px;
+      padding: 0px 15px;
+      margin-top: 8px;
+      background: #464646;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      span{
+        color: #fff;
+        &:nth-child(1){
+          font-size:11px;
+          float: left;
+          em{
+            font-size: 9px;
+          }
+        }
+        &:nth-child(2){
+          font-size:16px;
+          float: right;
+        }
+      }
+  }
+}
+
+.refund-to-step{
+  width: 290px;
+  margin: 0px 15px 0px 15px;
+  li{
+    padding-top: 49px;
+    width: 30%;
+    float: left;
+    text-align: center;
+    margin-right: 9px;
+    font-size: 11px;
+    line-height: 18px;
+    color: @com-title;
+    position: relative;
+    p{
+      font-size:8px;
+      color: @com-tip;
+    }
+    .r-t-stepline{
+    border:0.5px solid @com-border; 
+    width:92px; 
+    position: absolute; 
+    top:34px;
+    left: 43px;
+    z-index: 1;
+    }
+    .r-t-stepcircle{
+        width:10px; 
+        height:10px; 
+        border:1px solid @com-border; 
+        background: #d8d8d8; 
+        border-radius: 50%; 
+        position: absolute; 
+        top:30px;
+        left: 38px; 
+        z-index: 2;
+    }
+  }
+  .r-f-step3{
+    color: #5ca92d;
+    .r-t-stepcircle{
+      width: 16px;
+      height: 16px;
+      background: url(../../../assets/images/user/succeed.png) no-repeat;
+      background-size:contain; 
+      top:26px;
+      border: none;
+    }
+  }
+}

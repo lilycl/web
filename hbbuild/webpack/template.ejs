@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <% if (htmlWebpackPlugin.options.params.env === 'production') {%>
+            <!-- 开发环境webpack加载package.json中dependencies: Vue, 
+                生产环境中加载外部: vue.min.js(webpack.prod.conf.js中externals已配置)
+                add by libaoxu 2016-12-05
+                -->
+            <script type="text/javascript" src="static/lib/vue.min.js"></script>
+        <% } %>
+        <title><%= htmlWebpackPlugin.options.params.title %></title>
+        <script>
+            // 是否进行登录检查
+            var __notchecklogin__ = '<%- htmlWebpackPlugin.options.params.notchecklogin %>'
+            // 是否停止监听返回按钮
+            var __nobackevent__ = '<%- htmlWebpackPlugin.options.params.nobackevent %>'
+            // 页面id
+            var __pageid__ = '<%- htmlWebpackPlugin.options.params.id %>'
+            // 是否阻止安卓右键退出
+            var __preventexit__ = '<%- htmlWebpackPlugin.options.params.preventexit %>'
+            // 是否自动更新
+            var __update__ = <%- htmlWebpackPlugin.options.params.update %>
+            // 当前系统环境
+            var __env__ = '<%- htmlWebpackPlugin.options.params.env %>'
+            
+            /**
+             * 设置系统默认全局loading
+             */
+            var __AutoLoading__ = {
+                loadQueue: [],
+                show: function () {
+                    this.loadQueue.push(1)
+                    __loading.style.display = 'block'
+                },
+                hide: function () {
+                    this.loadQueue.pop()
+                    if (this.loadQueue.length > 0) {
+                        return false
+                    }
+                    __loading.style.display = 'none'
+                }
+            }
+
+			window.c = function(a){console.log(a)}
+			window._c = function(a){
+				alert(JSON.stringify(a).replace(/\,/g, ",\n"))
+			}
+			window._C = function(a){_c(a);}
+        </script>
+
+        <!--页面默认loading样式-->
+        <style>
+            .__header{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 45px;
+                border-bottom: solid 1px #e3e3e3;
+                background: #fff;
+                z-index:1;
+            }
+            .__header:before{
+                content: "";
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: 4px;
+                width: 35px;
+                height: 35px;
+                /*background: url(static/lib/back.png);*/
+                background-size: cover;
+            }
+            .__loading{
+                position: fixed;z-index:9999;display:block;top: 0;left: 0;width: 100%;height: 100%;background: rgba(255,255,255,0);text-align:center;
+            }
+            .__loading div{
+                position:absolute;top:50%;left:50%;margin-top: -12px;margin-left: -12px;background-color: none;
+                border-radius: 100%;-webkit-animation-fill-mode: both;animation-fill-mode: both;
+                border: 2px solid #6bd82f;border-bottom-color: transparent;height: 25px;width: 25px;
+                background: transparent !important;display: inline-block;
+                -webkit-animation: rotate 1.2s 0s linear infinite;animation: rotate 1.2s 0s linear infinite;
+            }
+            @-webkit-keyframes rotate {
+                0% {-webkit-transform: rotate(0deg) scale(1);transform: rotate(0deg) scale(1);}
+                50% {-webkit-transform: rotate(180deg) scale(1);transform: rotate(180deg) scale(1); }
+                100% {-webkit-transform: rotate(360deg) scale(1);transform: rotate(360deg) scale(1); }
+            }
+        </style>
+    </head>
+    <body>
+        <app>
+            <% if (!htmlWebpackPlugin.options.params.noheader) { %>
+            <div class="__header"></div>
+            <% } %>
+        </app>
+    </body>
+
+    <div class="__loading" id="__loading">
+        <div></div>
+    </div>
+</html>
+
+<script type="text/javascript">
+    document.body.addEventListener('touchstart', function(){});
+</script>
